@@ -69,7 +69,7 @@ $ ./qemu-system-i386 -L pc-bios \
     -netdev user,id=net0 -device rtl8139,netdev=net0 \
     -drive if=floppy,file=fd.img
 ```
-6. Reboot at end of Phase 2 will shut down QEMU. Boot from floppy image to perform the some modifications before proceed with Phase 3.
+6. Reboot at end of Phase 2 will shut down QEMU. Boot from floppy image to perform some modifications before proceed with Phase 3.
 ```
 $ ./qemu-system-i386 -L pc-bios \
     -rtc base=localtime -no-hpet -no-reboot \
