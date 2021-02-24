@@ -85,7 +85,7 @@ Disable Windows 98 startup logo by editing `C:\MSDOS.SYS` and placing `"Logo=0"`
 
 8. Boot up QEMU as in `step #5` and we should be greeted with 640x480 256-color desktop. Switch to High Color (16 bit) desktop at 800x600 or 1024x768 and apply the settings **without** reboot. Proceed with the remaining drivers update for "PCI Multimedia controller" (AC97) and "PCI Ethernet controller" (Realtek RTL8139).
 
-9. Boot up QEMU as in `step #5` with all drivers are installed and "Device Manager"  is clean. The next modifications workaround issues with VBEMP display driver of not supporting windowed "MS-DOS Prompt". Modify shortcut for "MS-DOS Prompt" to `"Full-screen"` and create `_DEFAULT.PIF` for MS-DOS programs to always launch in `"Full-screen"`. (https://jeffpar.github.io/kbarchive/kb/131/Q131877/). The final modification workaround KVM/WHPX reboot/shutdown, create a 2-line `_STARTUP.BAT` in `C:\WINDOWS`.
+9. Boot up QEMU as in `step #5` with all drivers now installed and "Device Manager"  is clean. The next modifications workaround issues with VBEMP display driver of not supporting windowed "MS-DOS Prompt". Modify shortcut for "MS-DOS Prompt" to `"Full-screen"` and create `_DEFAULT.PIF` for MS-DOS programs to always launch in `"Full-screen"`. (https://jeffpar.github.io/kbarchive/kb/131/Q131877/). The final modification workaround KVM/WHPX reboot/shutdown, create a 2-line `_STARTUP.BAT` in `C:\WINDOWS`.
 ```
 @echo off
 exit
