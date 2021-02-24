@@ -90,7 +90,7 @@ Disable Windows 98 startup logo by editing `C:\MSDOS.SYS` and placing `"Logo=0"`
 @echo off
 exit
 ```
-Create a PIF and add `_STARTUP.BAT` to `"Start->Programs->StartUp"` so that it is run automatically in `"Full-screen"` and `"Close on Exit"`.
+Create a PIF for `_STARTUP.BAT` and add to `"Start->Programs->StartUp"` so that it is run automatically in `"Full-screen"` and `"Close on Exit"`.
 
 10. Finally, we are in for **KVM/WHPX super-charged QEMU accelerated** Windows 98 SE virtual machine that brings modern CPU/GPU prowess to retro Windows games.
 ```
