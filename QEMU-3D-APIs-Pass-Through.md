@@ -9,11 +9,11 @@ API "Pass-Through" or "Forwarding" has the advantages of performance, simplicity
 \-------------------------\
 |    QEMU                 |
 |  \-------------------\  |
-|  |   Windows Guest   |  |
+|  |   Windows Guest   |  |   Note:
 |  |                   |  |
-|  | ( stubs )         |  |
-|  | |- glide.dll      |  |
-|  | |- glide2x.dll    |  |
+|  | ( stubs )         |  |   MESA Gallium9 Pass-Through
+|  | |- glide.dll      |  |   is an unimplemented, conceptual
+|  | |- glide2x.dll    |  |   Direct3D9 API pass-through.
 |  | |- glide3x.dll    |  |
 |  | |- opengl32.dll   |  |
 |  | \- d3d9.dll       |  |
@@ -38,23 +38,23 @@ API "Pass-Through" or "Forwarding" has the advantages of performance, simplicity
 \----------------------------------\
 |    QEMU                          |
 |  \----------------------------\  |
-|  |   Windows Guest            |  |
+|  |   Windows Guest            |  |   Note:
 |  |                            |  |
-|  | + WineD3D                  |  |
-|  | + OpenGlide                |  |
-|  | + Zeckensack GlideWrapper  |  |
+|  | + WineD3D                  |  |   MESA GL Pass-Through supports any
+|  | + OpenGlide                |  |   Host OS with OpenGL desktop profiles
+|  | + Zeckensack GlideWrapper  |  |   and has been qualified on
 |  | + Svens Glide3-to-OpenGL   |  |
-|  | |                          |  |
-|  | ( stubs )                  |  |
-|  | \- opengl32.dll            |  |
+|  | |                          |  |    * Windows 10
+|  | ( stubs )                  |  |    * Linux
+|  | \- opengl32.dll            |  |    * macOS Big Sur
 |  |                            |  |
-|  \--|-------------------------\  | 
-|     V                            |
+|  \--|-------------------------\  |   across multiple GPU vendors with
+|     V                            |   open-source or propriety GPU drivers
 |   \--------------\               |
-|   |   MESA GL    |               |
-|   | Pass-Through |               |
-|   \---|----------\               |
-|       V                          |
+|   |   MESA GL    |               |    * Intel (i915, iris)
+|   | Pass-Through |               |    * NVIDIA (nouveau, nvidia)
+|   \---|----------\               |    * AMD (r600, amdgpu)
+|       V                          |    * Apple M1
 |       Host                       |
 |       OpenGL                     |
 \----------------------------------\
