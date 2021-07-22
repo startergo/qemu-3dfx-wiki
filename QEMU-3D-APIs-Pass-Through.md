@@ -51,7 +51,7 @@ API "Pass-Through" or "Forwarding" has the advantages of performance, simplicity
 |  \--|-------------------------\  |   across multiple GPU vendors with
 |     V                            |   open-source or propriety GPU drivers
 |   \--------------\               |
-|   |   MESA GL    |               |    * Intel (i915, iris)
+|   |   MESA GL    |               |    * Intel (i915, i965, iris)
 |   | Pass-Through |               |    * NVIDIA (nouveau, nvidia)
 |   \---|----------\               |    * AMD (r600, amdgpu)
 |       V                          |    * Apple M1
