@@ -44,14 +44,14 @@ API "Pass-Through" or "Forwarding" has the advantages of performance, simplicity
 |  | + OpenGlide                |  |   Host OS with OpenGL desktop profiles
 |  | + Zeckensack GlideWrapper  |  |   and has been qualified on
 |  | + Svens Glide3-to-OpenGL   |  |
-|  | |                          |  |    * Windows 10
+|  | |                          |  |    * Windows 10/11
 |  | ( stubs )                  |  |    * Linux
-|  | \- opengl32.dll            |  |    * macOS Big Sur
+|  | \- opengl32.dll            |  |    * Apple M1 macOS
 |  |                            |  |
 |  \--|-------------------------\  |   across multiple GPU vendors with
 |     V                            |   open-source or propriety GPU drivers
 |   \--------------\               |
-|   |   MESA GL    |               |    * Intel (i915, i965, iris)
+|   |   MESA GL    |               |    * Intel (i915, crocus, iris)
 |   | Pass-Through |               |    * NVIDIA (nouveau, nvidia)
 |   \---|----------\               |    * AMD (r600, amdgpu)
 |       V                          |    * Apple M1
