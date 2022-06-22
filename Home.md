@@ -67,6 +67,8 @@ exit
 ```
 Create a PIF for `_STARTUP.BAT` and add to `"Start->Programs->StartUp"` so that it is run automatically in `"Full-screen"` and `"Close on Exit"`.
 
+For those who share the same OS image between Linux KVM and Windows WHPX, it is still recommended to perform the steps to disable Windows 98 Startup/Shutdown logos. **Windows WHPX seems to crash prone** during the display of logos between reboot/shutdown. Otherwise, **this step is optional for Linux KVM.** To disable Windows 98 Startup/Shutdown logos, edit `C:\MSDOS.SYS` and place `Logo=0` under `[Options]`. Remove or rename `LOGO*.SYS` in `C:\WINDOWS`.
+
 Finally, we are in for **KVM/WHPX super-charged QEMU accelerated** Windows 98 SE virtual machine that brings modern CPU/GPU prowess to retro Windows games.
 ```
 $ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
@@ -75,7 +77,7 @@ $ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
     -netdev user,id=net0 -device pcnet,rombar=0,netdev=net0 \
     -drive if=floppy,format=raw=file=fd.ima \
     -drive id=win98,if=none,file=../vmimgs/w98.qcw -device scsi-hd,drive=win98 \
-    -drive id=games,if=none,file=../vmimgs/mygames.qcw 
+    -drive id=games,if=none,file=../vmimgs/mygames.qcw -device scsi-hd,drive=games
 ```
 A [reference video](https://www.youtube.com/watch?v=4J9Br9ojkhg) is available at YouTube channel providing all the details in setting up Windows 98 SE QEMU virtual machine from scratch to 3D Acceleration in 15 mins.
 ## What About AdLib/Gravis UltraSound/SoundBlaster 16 For DOS Games
