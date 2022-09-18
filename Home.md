@@ -42,7 +42,7 @@ $ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
     -M pc,accel=kvm,hpet=off,usb=off -cpu host \
     -device VGA -device lsi -device ac97 \
     -netdev user,id=net0 -device pcnet,rombar=0,netdev=net0 \
-    -drive if=floppy,format=raw=file=fd.ima \
+    -drive if=floppy,format=raw,file=fd.ima \
     -drive id=win98,if=none,file=../vmimgs/w98.qcw -device scsi-hd,drive=win98 \
     -cdrom w98se.iso -boot a
 ```
@@ -57,7 +57,7 @@ $ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
     -M pc,accel=kvm,hpet=off,usb=off -cpu host \
     -device VGA -device lsi -device ac97 \
     -netdev user,id=net0 -device pcnet,rombar=0,netdev=net0 \
-    -drive if=floppy,format=raw=file=fd.ima \
+    -drive if=floppy,format=raw,file=fd.ima \
     -drive id=win98,if=none,file=../vmimgs/w98.qcw -device scsi-hd,drive=win98 \
 ```
 Thanks to KVM/WHPX acceleration, from running SETUP to the Welcome to Windows 98 First Bell takes less than 10 mins on reasonably fast systems with SSD storage. With the optional additional drivers available during Phase #2 of Windows 98 Setup, the full 640x480 256-color desktop is readily available and all drivers installed. Otherwise, proceed to install all the drivers ***AFTER*** the modification to workaround KVM/WHPX reboot/shutdown. Create a 2-line `_STARTUP.BAT` in `C:\WINDOWS`.
@@ -75,7 +75,7 @@ $ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
     -M pc,accel=kvm,hpet=off,usb=off -cpu host \
     -device VGA -device lsi -device ac97 \
     -netdev user,id=net0 -device pcnet,rombar=0,netdev=net0 \
-    -drive if=floppy,format=raw=file=fd.ima \
+    -drive if=floppy,format=raw,file=fd.ima \
     -drive id=win98,if=none,file=../vmimgs/w98.qcw -device scsi-hd,drive=win98 \
     -drive id=games,if=none,file=../vmimgs/mygames.qcw -device scsi-hd,drive=games
 ```
