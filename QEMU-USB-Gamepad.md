@@ -42,7 +42,7 @@ Without any Host Joystick/Game controller, QEMU USB Gamepad implementation offer
 Such idea was indeed out of the Game Preservation efforts that **`qemu-3dfx`** put up for perfect restoration of LucasArts STAR WARS: X-Wing 95, TIE Fighter 95 and X-Wing vs TIE Fighter 95 with mandatory joystick requirement to play the games. Check out the [YouTube video](https://www.youtube.com/watch?v=MiF8CcU34kc). For STAR WARS fans who enjoyed the games with keyboard & mouse mechanics in the DOS series, QEMU featuring **`qemu-3dfx`** is capable of replicating the same Game Experience with the much improved 3D accelerated graphics Windows versions of the games, ***ALL in pristine condition***.
 
 ## QEMU USB Gamepad In a Nutshell
-QEMU USB Gamepad is simple, efficient and truly usable for enjoying any Good Old Windows games with Game controllers. It is far superior to any poll-based game port emulation for joysticks. It can even be used for DOS games that work under Windows 98/98SE/ME VMs. Windows 98/98SE/ME MS-DOS sessions automatically get virtualized game port emulation by the OS for attached USB Game controller as standard (X, Y) 2-axis, 4-button joystick.
+QEMU USB Gamepad is simple, efficient and truly usable for enjoying any Good Old Windows games with Game controllers. It is far superior to any poll-based game port emulation for joysticks. It can even be used for DOS games that work under Windows 98/98SE/ME VMs. Windows 98/98SE/ME DOS sessions automatically get virtualized game port emulation by the OS for attached USB Game controller as standard (X, Y) 2-axis, 4-button joystick.
 ```
 1. Simple, Direct mapping
 
