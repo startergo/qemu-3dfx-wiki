@@ -81,5 +81,5 @@ QEMU USB Gamepad is simple, efficient and truly usable for enjoying any Good Old
 
 ```
 ## Reference
-https://www.reddit.com/r/VFIO/comments/878ymp/gamepad_support_in_qemu/
+https://www.reddit.com/r/VFIO/comments/878ymp/gamepad_support_in_qemu/<br>
 https://www.psdevwiki.com/ps4/DS4-USB#HID_Report_Descriptor
