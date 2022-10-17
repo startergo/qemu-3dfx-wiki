@@ -30,7 +30,7 @@ Enable two instances of QEMU USB Gamepad. Mapped to SDL2 `Joystick #0 and #1`.
 ```
 Enable two instances of QEMU USB Gamepad by splitting SDL2 `Joystick #0`. Splitting SDL2 `Joystick #0` requires Host Joystick/Game controller with at least 4-axis and POV Hat. The 2nd pair of axes, typically the right-thumb stick, and POV Hat are remapped into next QEMU Gamepad instance as standard (X, Y) 2-axis, 4-button joystick.
 
-**Only-the-Fly Host Joysticks/Game Controllers Hot-plug & Removal**
+**On-the-Fly Host Joysticks/Game Controllers Hot-plug & Removal**
 
 At any given time, Host Joysticks/Game Controllers can be hot-plugged or removed to change to different Game controllers to suit the gaming needs without rebooting QEMU Virtual Machine. For instance, one would prefer D-pad based Game controllers for action arcade-style games and dual analog thumb-sticks Game controllers for sports racing. Simply by disconnecting one Game controller for another, SDL2 will make the new one `Joystick #0`. No changes are necessary on Guest VMs.
 
