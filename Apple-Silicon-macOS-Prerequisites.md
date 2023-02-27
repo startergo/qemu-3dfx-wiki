@@ -18,7 +18,11 @@ $ brew --prefix
 ```
 4. Install the bottles from brew
 ```
-$ brew install capstone glib gettext gnutls libepoxy libgcrypt libslirp jpeg-turbo lz4 opus openssl@1.1 sdl2 zstd
+$ brew install capstone glib gettext gnutls libepoxy libgcrypt libslirp jpeg-turbo lz4 opus sdl2 zstd
+```
+For package bundled with **DOSBox SVN** Games essentials, install additional bottles from brew
+```
+$ brew install sdl_sound sdl12-compat sdl_net mt32emu
 ```
 5. Verify Apple Command Line Tools for Xcode. Example from `macOS Monterey 12.5.1`, exact `version` may differ in future.
 ```
