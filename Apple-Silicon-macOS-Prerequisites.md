@@ -43,5 +43,10 @@ Verify the installed & signed QEMU
 ```
 $ qemu-system-i386 --version
 ```
+## QEMU CPU Invocation Option
+The software libraries in QEMU VM Addons (since commit [`5112b64`](https://github.com/kjliew/qemu-3dfx/commit/5112b64c60d79fdcef81e9da0bee561a9a2677b8)) are optimized for modern x86 SIMD instruction sets through vectorizing code generation compilers options **`'-march=x86-64-v2 -mtune=generic'`**. There is no reason not to take advantages of such capabilities. For Intel/AMD CPUs with KVM/WHPX acceleration, the **`'x86-64-v2'`** architecture level is given for any CPUs in the last 7 years. Apple Silicon does not support x86 virtualization and QEMU TCG default CPU options is good up to SSE2. The following CPU invocation option is required for QEMU TCG to enable **`'x86-64-v2'`** architecture level for CPU emulation.
+```
+$ qemu-system-i386 -cpu max ...
+```
 ## What About My OSX/macOS Native Games Collection
 I felt ***SORRY*** for those with collection of OSX/macOS native Games. Apparently, Apple deprecation policy mandated that everyone stopped living in the past with Good Old Games and looked at the bright side of flourishing modern Games in iTune/AppStore. Apple Silicon is poised to eventually unite iOS and macOS as **"One-Apple Platform"** for Games. ***THAT IS THE FUTURE!!*** Fortunately with the tremendous performance offered by Apple Silicon despite lacking support for x86 virtualization, many PowerPC macOS ports of the same Windows PC Games are indeed playable on Apple Silicon through QEMU with 3D graphics acceleration. Notable examples are [Core Design Tomb Raider (I, II, III, IV, V) series](https://www.youtube.com/watch?v=-wb_IKY0Mkc) from the late 90's, Unreal Tournament GOTY, Diablo II, Shogo Mobile Armor Division, Homeworld and almost all Games based on Quake idTech1/2/3 engine and many more are playable with Windows 98 SE VM on Apple Silicon macOS. This is the results of Game Preservation from qemu-3dfx with **Peace-of-Mind VM Isolation**, **"Pristine Condition" in Retail Originality** and **Playability Beyond Windows OS and x86 PCs**.
