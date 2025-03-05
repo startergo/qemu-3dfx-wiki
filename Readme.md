@@ -38,7 +38,7 @@ $ ./qemu-img create -f qcow2 ../vmimgs/w98.qcw 1024M
 ```
 2. Boot from FD.IMA, FDISK/FORMAT HDD image
 ```
-$ ./qemu-system-i386 -nodefaults -rtc base=localtime display sdl \
+$ ./qemu-system-i386 -nodefaults -rtc base=localtime -display sdl \
     -M pc,accel=kvm,hpet=off,usb=off -cpu host \
     -device VGA -device lsi -device ac97 \
     -netdev user,id=net0 -device pcnet,rombar=0,netdev=net0 \
