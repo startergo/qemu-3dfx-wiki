@@ -35,7 +35,7 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ## Installing QEMU
 Install by untar QEMU binary package, **`'sudo'`** may be required. Exact `version` and `commit id` may differ in future.
 ```
-$ sudo tar xf qemu-7.1.0-3dfx-dae79bb-darwin-arm64.tar.zst -C /
+$ sudo tar --no-same-owner -xm -f qemu-7.1.0-3dfx-dae79bb-darwin-arm64.tar.zst -C /
 $ cd `brew --prefix`/sign
 $ bash ./qemu.sign
 ```
